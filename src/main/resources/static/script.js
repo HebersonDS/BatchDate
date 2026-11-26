@@ -58,19 +58,42 @@ async function carregarLotes(idProduto) {
 
     lotes.forEach(lote => {
 
-        const item = document.createElement("p");
+        const item = document.createElement("div");
 
-        item.style.cursor = "pointer";
+        const texto = document.createElement("p");
 
-        item.addEventListener("click", () => {
-            loteSelecionado = lote.id;
+        texto.textContent = `Lote: ${lote.codigoLote} | Validade: ${lote.dataValidade} | Quantidade: ${lote.quantidade}`;
+
+        item.appendChild(texto);
+
+        const botaoExcluir = document.createElement("button");
+
+        botaoExcluir.textContent = "Excluir";
+
+        item.appendChild(botaoExcluir);
+
+        botaoExcluir.addEventListener("click", () => {
+            excluirLote(lote.id);
         });
-
-        item.textContent = `Lote: ${lote.codigoLote} | Validade: ${lote.dataValidade} | Quantidade: ${lote.quantidade}`;
 
         listaLotes.appendChild(item);
 
     });
+}
+
+async function excluirLote(idLote) {
+
+    const resposta = await fetch(`${API}/lotes/${idLote}`, {
+        method: "DELETE"
+    });
+
+    if (resposta.ok) {
+        alert("Lote excluído com sucesso!");
+        carregarLotes(produtoSelecionado);
+    } else {
+        const erro = await resposta.json();
+        alert(erro.erro);
+    }
 }
 
 async function cadastrarProduto() {

@@ -1,0 +1,58 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #333;
+    margin: 30px;
+}
+
+h1 {
+    color: #245b45;
+}
+
+h2 {
+    color: #333;
+    margin-top: 25px;
+}
+
+input {
+    padding: 8px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 9px 14px;
+    margin: 5px;
+    background-color: #287a55;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1d5e40;
+}
+
+#listaProdutos p,
+#listaLotes p,
+#listaAlertas p {
+    background-color: white;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    max-width: 700px;
+}
+
+#listaProdutos p:hover,
+#listaLotes p:hover {
+    background-color: #e8f3ed;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 25px 0;
+}

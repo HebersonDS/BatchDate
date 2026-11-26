@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BatchDate</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>BatchDate - Controle de Validade</h1>
+
+    <hr>
+
+    <h2>Cadastrar Produto</h2>
+
+    <input type="text" id="nomeProduto" placeholder="Nome do produto">
+    <input type="text" id="categoriaProduto" placeholder="Categoria">
+    <button id="btnCadastrarProduto">Cadastrar Produto</button>
+
+    <hr>
+
+    <h2>Produtos cadastrados</h2>
+
+    <div id="listaProdutos"></div>
+
+    <hr>
+
+    <h2>Lotes do Produto</h2>
+
+    <div id="listaLotes"></div>
+
+    <button id="btnExportar">Exportar Produto em JSON</button>
+
+    <h3>Registrar entrada de mercadorias</h3>
+
+<input type="number" id="quantidadeEntrada" placeholder="Quantidade recebida">
+
+<button id="btnRegistrarEntrada">Registrar Entrada</button>
+
+    <hr>
+
+    <h2>Cadastrar Lote</h2>
+
+    <input type="text" id="codigoLote" placeholder="Código do lote">
+    <input type="date" id="dataValidade">
+    <input type="number" id="quantidadeLote" placeholder="Quantidade">
+
+    <button id="btnCadastrarLote">Cadastrar Lote</button>
+
+    <hr>
+
+    <h2>Alertas de Validade</h2>
+
+    <button id="btnAlertas">Consultar Alertas</button>
+    <div id="listaAlertas"></div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
